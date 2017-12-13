@@ -7,6 +7,11 @@
 </ion-header>
 
 <ion-content>
+  <ion-refresher (ionRefresh)="recargar_animales($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+
   <ion-list>
     <ion-item-sliding  *ngFor="let animal of animales; let i = index" (click)="reproducir(animal)">
       <ion-item>
@@ -25,4 +30,5 @@
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
+
 </ion-content>
